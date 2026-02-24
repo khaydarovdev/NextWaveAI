@@ -62,10 +62,6 @@
           <div class="text-blue-300 text-xs md:text-sm">Performance boost with tech</div>
         </div>
         <div class="text-center p-4 md:p-6 bg-white/5 rounded-2xl backdrop-blur-sm">
-          <div class="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">7</div>
-          <div class="text-blue-300 text-xs md:text-sm">Assistive features</div>
-        </div>
-        <div class="text-center p-4 md:p-6 bg-white/5 rounded-2xl backdrop-blur-sm">
           <div class="text-3xl md:text-4xl font-bold text-orange-400 mb-2">24/7</div>
           <div class="text-blue-300 text-xs md:text-sm">Always available</div>
         </div>
