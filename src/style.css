@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/web/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body.dyslexic-font {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+}
+
+body.dyslexic-font * {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+}
+
+/* Color overlay - works by adding a filter to the entire page */
+body.overlay-yellow {
+  filter: sepia(0.3) saturate(1.2);
+}
+
+body.overlay-blue {
+  filter: sepia(0.2) hue-rotate(180deg) saturate(1.1);
+}
+
+body.overlay-pink {
+  filter: sepia(0.3) hue-rotate(300deg) saturate(1.2);
+}
+
+body.overlay-green {
+  filter: sepia(0.2) hue-rotate(80deg) saturate(1.1);
+}
+
+/* Alternative approach - background tint */
+body.overlay-yellow::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 224, 0.1);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body.overlay-blue::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(173, 216, 255, 0.1);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body.overlay-pink::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 192, 203, 0.1);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body.overlay-green::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(144, 238, 144, 0.1);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 180, 216, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 180, 216, 0.5);
+}
